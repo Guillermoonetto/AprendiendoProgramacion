@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BIOCUEVA</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BIOCUEVA</h1>
+        <h3>Tu laboratorio de confianza</h3>
+    </header>   
+    <hr>
+    <section>
+        <article>
+            <h3>Lo que somos</h3>
+            <img src="imagenes/laboratorio-analisis.webp" width="600" style="border: 3px solid black;">
+            <p>
+                Somos un equipo de profesionales dedicados de lleno a la salud integral de nuestros paciente,<br>
+                 nuestro principal objetivo es satisfacer las necesidades en tiempo y forma.<br>
+                  <span style="color: blue;" id="profesionales"><a href="Profesionales.html" target="_blank">Nuestros profesionales</a></span> altamente 
+                  capacitados para desarrollar las tareas especificas estan <br>
+                  las 24hs a disposicion para cualquier consulta y/o diagnostico, dando resultados oportunos 
+                  y veraces.
+            </p>
+        </article>
+        <hr>
+        <article>
+            <table style="width: 500px;">
+                <thead>
+                    <tr>
+                        <th>Tipo de muestra</th>
+                        <th>Determinacion</th>
+                        <th>Valor en NBU</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Suero</td>
+                        <td>Glucemia</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Suero</td>
+                        <td>uremia</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Suero</td>
+                        <td>creatininemia</td>
+                        <td>2</td>
+                        <tr>
+                            <td>Sangre entera con EDTA</td>
+                            <td>Hemograma</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>suero c/ Citrato </td>
+                            <td>Hemostasia</td>
+                            <td>3</td>
+                        </tr>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <hr>
+        <article>
+            <p>Hace tu consulta y reserva tu turno.</p>
+            <form action="/formulario" method="post">
+                <label for="nombre"></label>
+                <input type="text" id="nombre" name="nombre" placeholder="NOMBRE">
+                <label></label>
+                <input type="text" id="apellido" name="apellido" placeholder="APELLIDO">
+                <label></label>
+                <input type="text" id="documeto" name="documento" placeholder="D.N.I.">
+                <br>
+                <textarea cols="70" rows="10" id="comentario" placeholder="Pedi turno y sacate las dudas" name="comentario"></textarea>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+        </article>
+    </section>
+    <hr>
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>copyrigth 2022</p>
+        <a href="mailto:guillermo.g.onetto@gmail.com">Contacto via mail</a>
+    </footer> 
+</body>
+</html>

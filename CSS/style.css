@@ -1,0 +1,151 @@
+body {                                                       /* Para asignar un estilo puede o bien escribir el nombre del atributo o usar #+ID */
+
+}
+#tituloh1 {                                                  /* Para asignar estilos a en base al ID se debe usar el simbolo # seguido del ID*/
+    color: red;
+}
+
+#tituloh1:hover {
+    color: black;
+}
+
+p.texto {                                                   /* usando el nombre de la etiqueta seguida de un punto y el nombre de la clase podemos establecer el estilo */
+    color: green;
+}
+
+p.especial {                                                /*IMPORTANTE - En css la prioridad de los comandanos es de abajo hacia arriba por ello si tenemovarios parrafos que tiene clases con palabras comunes se priorizara el cambio de abajo hacia arriba*/
+    color: blue;
+}
+
+div p {                                                     /* Este selector sirve para indicar que dentro del atributo "div" en todos los atributos "p" que se encuentren en su interior sean hijos,nietos,subnietos,etc se va a establecer un estilo. En este caso use "p" como ejemplo puede ser otros */
+    color: aqua;
+} 
+
+div h2, div h3 {                                            /* Si despues del la coma yo escribiera solo h3 se aplicaria a todos los h3 para eso debo agregar nuevamente que quiero que se modifique solamente los h3 que estan dentro de los div*/
+    color: brown;
+}
+
+/* * {                                                         /* El asterico sirve para seleccionar TODOS los elementos dentro de HTML y aplicar las propiedades siempre y cuando no se le hayan aplicado otras propiedas , aquellos elementos que tengan propiedades aplicadas no seran reemplazadas, solo seran reemplazadas aquellas propiedasdes queno se hayan aplicado
+    font-size: 20px;
+    color: black;
+    font-style: italic;
+} */
+
+/*.color {                                                  /* La asignacion de color se puede hacer de 3 formas de manera exagesimal(# + 6 caracteres, tambien puede hacerce con 3 caracteres), RGB o valores HSL 
+    color: #865447; 
+} */
+/*
+.color {
+    color rgb(0,0,0);                                       /* En la convencion RGB hay 3 espacios , el primero para el rojo , sgundo para el verde , tercero para el azul , los valores van de 0 a 255 siendo 0 negro y 255 la maxima intensidad del color
+} */
+
+.color {
+    /* border: 5px orange outset; */                         /* Se puede agregar bordes de diferente tipo como por ejemplo: dotted, dashed,solid,double, goove,ridge, inset, outset, none , hidden. los elementos que van desde goove hasta outset se pueden aplicar a objetos 3d*/
+} 
+
+.color {
+    border-style: solid;                                    /* Se puede agregar 4 variables de bordes y asi combinarlos , se escriben con espacios entre si , de esta manera el 1ro corresponde a el borde superior, el 2do al derecho, el 3ro al inferior y el 4to al izquierdo */
+    border-color: orangered;
+    /*border-top: #aef                                       El atributo sirve para asignar un color especifico a al borde superior, tambien en los otros lados de los bordes cambiando o agregando otro atributo que indique si es en top, bot o rigth */
+    border-radius: 4px;
+    border-width: 1em;                                      /* Las unidades de medidas que se utilizan son en pixeles (esta es relativa por que no todos los pixeles tiene el mismo tama;o), en cm , en mm, en in (pulgada= 2,54cm), en PT (puntos) y tambien en pc (picas= a 12 puntos) */
+                                                            /* Lo mejor es usar medidas relativas respecto a las fuetnes por ejemplo em o rem*/
+}
+
+#fondo {
+    text-align: center;
+    /* background-color: rgb(255,0,0,0.5); */               /* La propiedad background-color me permite darle un color al fondo de la etiqueta, si queremos darle opacidad lo que hacemo es agregar una variable mas despues de la tercera en rgb */
+    /* opacity: 0.5; */                                     /* La propiedad opacity permite darle opacidad al elemento completo y no solo al color , va de 0 diendo completamente opaco a 1 completamente trasparente*/       
+    /* height: 200px; */
+    /* background-image: url(fort.jpg); */                  /* La propiedad "background-image" permite agregar una imagen de fondo*/
+    /* background-size: auto; */                            /* La propiedad "background-size" permite darle el tama;o a la imgane , los valores pueden ser en unidades como px , o puede ser auto ,contain o cover */
+    /* background-repeat: no-repeat; */                     /* La propiedad "background-repeat* permite asignar si la imagen que esta dentro del fondo se repite o no y en que eje puede repetirse */ 
+    /* background-position: center center; */               /* La propiedad "background-position" permite elegir la pocision de la imagen dentro del fondo y tiene 2 parametros el primero puede ser left, center o rigth y el segundo parametro puede ser top, center o bottom*/
+    
+    background: #f00 url(fort.jpg) no-repeat center center / 100px 100px;  /* Usando la propiedad de "background" podemos hacer uso de todas la otras etiquetas anteriores en esta sola, para ello hay que poner en orden las propiedades de la siguiente manera: color, url() , si se repite, y la posicion . Ademas podemos agregar el tama;o poneindo un / seguido de las dimension */
+}
+
+.margen {
+    background-color: blue;   
+    margin: 15px 20px 25px 30px;                            /* La propiedad "margin" genera un espacio por fuera del elemento*/
+    padding: 30px 25px 20px 15px;                           /* La propiedad "padding" genera un espacio por dentro del elemento*/
+    border: red 1px solid;                                /* Para configurar tanto pading como margin se puede usar 1, 2, 3 o 4 valores, si usamos solo 1 establece el valor para todos los lados, si usamos 2 el primero representa al eje y y el segundo al eje x, si usamos 3 el primero representa el padding superior , el segundo al eje x y el tercero al padding inferior, si uso 4 valores representan al superion , derecho , inferior e izquierdo*/
+    height: 100px;                                          /* Si modificamos el tama;o los elementos pueden quedar sobresaliendo*/
+    width: 40px;
+    overflow: hidden;                                       /* La propiedad "overflow" por defecto esta en visible haciendo que el contenido quede por arriba del fondo, si seleccionamos "hidden" el contenido que esta sobresalido queda por detras y no se ve lo que sobra, aunque tambien hay otra opcion que es la de "scroll" agregando barras laterales para deslizarce en el interior*/
+    outline: black 2px solid;                             /* La propiedad "outline" es un borde que se coloca por afuera del borde de la propiedad "border" y antes del "margin"*/
+
+    /* Toda etiqueta HTML tiene ,de afuera para adentro, un margin, border,pading y en el interior el contendio de la etiqueta*/
+}
+
+.text {
+    font-family: 'Macondo', sans-serif;    /* Se usa para agregar grupos de fuentes, de esta manera si por algun motivo no puede cargar la primera , para al siguiente*/
+    text-align: center;                                     /* La propiedad "text-align" permite mover de lugar al texto dentro de la etiqueta*/
+    text-decoration: underline;                             /* La propiedad "text-decoration" permite agregar al texto decoracion como subrayados, tachados , etc*/
+    text-shadow: 10px 5px 4px grey;                       /* La propiedad "text-shadow" agrega una sombra para ello se tiene que definir valores los 3 el primero es el desenfoque a la derecha, el segundo hacia abajo y el tercero es el blur despues se le agrega, si se quiere, el color de la sombra*/
+
+    /*Si queremos agregar fuentes personalizadas podemos ir a google fonts seleccionar la que queremos, copiar los links y pegarlos en el archivo HTML dentro de la etiqueta "head" despues en la propiedad "font-family" debemos colocar entre comillas el nombre de la fuente que elegimos en google, agregando seguido de una coma una fuente por defecto en caso de que no se cargue la que nosotros elegimos*/
+}
+
+a:link {                                                    /* En este caso el selector "a:link" sirve para indicar que el link NO ha sido visitado*/
+    color: black;
+}
+
+a:visited {                                                 /* El seclector "a:visited" sirve para indicar cuando un link ha sido visitado */
+    color: violet;
+}
+
+a:hover {                                                  /* El selector "a:hover" sirve para generar un cambio en en link cuando paso el cursor por encima*/                                         
+    color: grey;
+}
+
+a:active {                                                 /* El selector "a:active" sirve para indicar cuando estoy presionando el link */
+    color: red;
+}
+
+/* IMPORTANTE - Se debe respetar el orden en el cual estan estos selectores , sin importar si NO ocupamos algunos de ellos siempre deben estar en este orden */
+
+ul {
+    background-color: aquamarine;
+    list-style-type: square;                               /* La propiedad "list-style-type" permite cambiar el tipo de marcada para cada elemento de la lista*/
+    /* padding-left: 0px; */                               /* Las listas por defecto traen un padding de 40, agregando la propiedad "padding-left" igual a 0px lo que conseguimos es quitar los puntos que defien cada elemento*/
+    /* list-style-position: inside; */                     /* La propiedad "list-style-position" permite elegir si los elementos que aparecen adelante de cada linea estan dentro o fuera del texto*/
+}
+
+table {
+    width: 100%;                                           /* Usando porcentaje hacemos que use el espacio de la pagina en base del tama;o que le damos a la ventana*/
+    border-collapse: collapse;                             /* La propiedad "border-collapse" se utiliza para elimiar las separaciones que se generan entre los bordes en una tabla*/
+}
+
+th, td {
+    border: solid 1px grey;
+    padding: 5px;
+}
+
+th {
+    text-align: left;
+    color: white;
+    background-color: #f00;
+}
+
+tr:nth-child(even) {                                     /* El selector "tr:nth-child()" sirve para seleccionar elemento pares o impares para ello debemos poner even o od dentro de los parentesis*/
+    background-color: #eee;
+}
+
+tr:hover {
+    background-color: grey;                           
+}
+
+
+span {
+    display: block;                                     /* La propiedad display por lo general en las etiquetas de HTML esta como block , quiere decir que cada etiqueta utiliza todo el bloque de espacio en la pagina, las etiquetas div viene por defecto en display block , no asi las etiqeutas SPAN */
+    /* display: none; */                                /* Si elegimos display=none , los elementos se ocultan*/
+    /* visibility: hidden; */                           /* La propiedad "visibility" permite ocultar los elementos*/            
+    max-width: 300px;                                   /* La propiedad "max-width" permite dar un tama;o al elemento pero si puede ser menor el elemento si la venta tambien lo es*/
+    background-color: #f00;
+}                                                      
+
+.inline {                                               /* Las etiquetas que vienen por defecto con la propiedad display=inline son la de SPAN, A y la etiqueta IMG */
+    display: inline;
+}
+

@@ -1,0 +1,77 @@
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    }
+
+.elemento {
+    float: left;
+    padding: 15px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li:hover {
+    background-color: rgba(0,0,0,0.3);
+
+}
+
+li:active {
+    color: red;
+}
+
+.texto {
+    margin-top: 50px;
+}
+
+.boton {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 15px;  
+    cursor: pointer; 
+}
+
+.drop {
+    position: relative;
+    display: inline-block;
+   
+}
+
+.dropmenu {
+    display: none;
+    position: absolute;
+    background-color: #999;
+    min-width: 20px;
+    box-shadow: 0px 4px 5px rgba(0,0,0,0.3);
+}
+
+.dropmenu a {
+    color: black;
+    text-decoration: none;
+    
+}
+
+.boton:hover {
+
+    background-color: #999;
+}
+
+.dropmenu a:hover {
+    background-color:#666;
+    color: white;
+}
+
+.drop:hover .dropmenu {
+    display: block;
+}

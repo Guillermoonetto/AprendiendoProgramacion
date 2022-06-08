@@ -1,0 +1,91 @@
+<!DOCTYPE html>                                                                                    <!-- Esta tiqueta indica que la version de html es la 5-->       
+<html>                                                                                             <!-- Dentro de las etiquetas html va a estar todo el contenido de la pagina-->
+<head>       
+    <title>La cueva del bioquimico</title>                                                         <!-- Esta etiqueta le da la cabecera a la pagina , en esta va el titulo -->
+    <style>                                                                                        
+        table, th, td { 
+            border:1px solid black;                                                              
+        }
+    </style>                                                                                       <!-- Esto se utiliza para agregar bordeas a todas las tablas, minima intro a css-->
+</head>
+<hr>                                                                                               <!-- Esta etiqueta permite hacer lineas que separen contenido -->
+<body>                                                                                             <!-- Esta etiqueta le da el cuerpo a la pagina , aca va todo lo que vas a ver en la pagina, textos,imagenes, videos , cuadros, botones,etc -->
+    <h1>Bienvenido a la pagina del laboratorio</h1>                                                <!-- Las etiequetas "h" son para titulos o heading y subtitulos, es para dar jerarquia , tambien tiene un componente estetico en cuatno a tam;o pero no es lo importante-->
+    <h2>Bienvenido a la pagina del laboratorio</h2>
+    <hr>
+    <h3>Bienvenido a la pagina del laboratorio</h3>
+    <h4>Bienvenido a la pagina del laboratorio</h4>
+    <hr>
+    <h5>Bienvenido a la pagina del laboratorio</h5>
+    <h6>Bienvenido a la pagina del laboratorio</h6>
+    <hr>
+    <p> En esta linea tenemos que poner todo el contenido en un
+        parrafo, <span style="color:red">estoy extendiendo este parrafo para que                 <!-- La estiqueta de "span" se utiliza para referenciar texto o etiquetas, se utiliza para poder combinar con CSS y darle atributos al texto-->
+        sea mas largo.</span></p>
+    <img src="imagenes/venger enguen.jfif" width="450"/>                                                       <!-- La etiqueta img se utiliza para cargar imagenes, para esto se utiliza el atributo "src=" y entre comillas indicar la ruta donde se encuentra la imagen tanto una url como si esta en mi equipo, tambien se puede utilizar atributos width o hiegth para darle ancho y alto, si usamos solo 1 mantien la proporcion-->                                      
+    <p>este es otro ejemplo de texto.Cuando el texto es muy largo y quiero hacer 
+        que no quede todo continuado puedo hacer uso de una etiqueta llamada "br"<br>              <!-- La etiqueta "br" sirve para dar satos en un parrafo-->
+        que me permite dar un salto de renglon</p>
+    <a target="_blank"  href="https://www.google.com.ar">Ir a google</a>                           <!-- La etiqueta "a" se utiliza de hipervinculo, permitiendo vincular paginas web como asi tambien elementos que esten en la misma pagina, para utilizarla hay que agregar dentro de la etiqueta de apertura "a" el atributo "href=" y entre comillas la pagina, direccion del archivo o id. Tambien se puede utilizar el atributo "target=blank" para que se abra en una pesta;a nueva-->
+    <br>
+    <br>
+    <form action="/formulario" method="get">                                                       <!-- El atributo "action" indica donde enviar el formulario, el atributo "method" la forma en la que se va a enviar puede ser GET o POST-->
+        <label for="nombre">Nombre</label>                                                         <!-- La etiqueta label sirve para darle un nombre a un cradro en cual introducir datos, a esta se le puede asignar el atributo "for" para -->
+        <input type="text" id="nombre" name="nombre" placeholder="NOMBRE">                         <!-- La etiqueta "input" genera un cuadro con el cual puede interactuar la persona en la pagina, por defecto el atributo "type" es tipo texto, pero pueden ser mucho otros como checkbox,radio, email, file,etc. El atributo "placeholder" sirve para mostrar un texto en gris claro dentro del cuadro-->
+        <br>
+        <label for="apellido">Apellido</label> 
+        <input type="text" id="apellido" name="apellido" placeholder="APELLIDO">                   <!-- El atributo "value" dentro de la etiqueta de input se utiliza para que en el casillero haya un valor por defecto, en el caso de la etiqueta textarea el texto por defecto se escribe dentro de la etiqueta y no se usa el atributo "value"-->
+        <br>
+        <label for="comentario">Comentario</label>
+        <textarea cols="50" rows="10" id="comentario" placeholder="Ingrese comentario" 
+         name="comentario"></textarea>                                                             <!-- La etiqueta "textarea" genera un cuadro donde el usuario puede escribir un comentario, ademas se pueden observar atributos como "rows" para indicar filas y "cols"para indicar columnas-->
+        <br>
+        <input type="submit"> 
+        <button type="button"><img src="imagenes/venger enguen.jfif" width="50"></button>          <!-- La etiqueta "button" si esta dentro de un formulario y no se especifica el atributo "type" es un boton de enviar por defecto. Hay 3 tipos de atributos tipo "type" button, summit, reset-->
+        <button type="reset" >Reset</button>                                                       <!-- Se pueden agregar imagenes adentro de botones , en vez de poner el nombre agregamos la etiqueta autocontenida "img" y darle el tama;o con atributos como width y higth-->
+     </form>
+    <hr>
+    <ul>                                                                                           <!-- La etiqueta "ul" se utiliza para generar lista NO ordenadas (unorder list)-->
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>                                                                        <!-- Cada elemento se representa con la etiqueta "li"-->
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+    <hr>
+    <ol>                                                                                           <!-- La etiqueta "ol" se utiliza para generar lista ordenadas (order list)-->
+        <li value="20">Elemento 1</li>
+        <li>Elemento 2</li>                                                                        <!-- Dentro de la etiqueta "li" puedo agregar el atributo "value=" y entre comillas colocar el numero por el que queremos que empiece o siga-->
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5:                                                                            <!-- En este elemento podemos ver como anidar listas y acer sublistas, para eso debemos agregar la etiqueta "ol" dentro de la etiqueta "li"-->
+            <ol>
+                <li style="list-style-type: lower-alpha;">sub elemento 1</li>
+                <li style="list-style-type: lower-alpha;">Sub elemento 2</li>                      <!-- Si dentro de la etiqueta "li" agregamos el atributo "style="list-style-type:" podremos cambiar los indices de la lista (si tocamos control+barra espaciadora vermos todos los posibles)-->
+            </ol>
+        </li>
+    </ol>    
+    <hr>   
+    <table style="width: 500px;">                                                                                        <!-- La etiqueta "table"sirve para armar tablas-->
+        <thead>                                                                                    <!-- Sirve para indicar los nombres de cada columna y esta relacionado con algunos navegadore en los culaes si la tabla es muy larga se puede escrolear y de esta forma lo que este aca adentro no escrolea-->
+            <tr>                                                                                   <!-- La etiqueta "tr" va dentro de la etiqueta "table" y es para generar columnas-->
+                <th>Producto</th>                                                                  <!-- La etiqueta "th va dentro de la de "tr" y genera filas, ademas la etiqueta th es para darle el nombre a cada columna, para los items estandares que se agregan a la table se usa "td"-->
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>                                                                                    <!-- Sirve para alojar todos los elementos que estan dentro de la lista en la tabla, algunos navegadores permiten escrolear tablas-->
+            <tr>
+                <td>El culo del leo</td>
+                <td>gratis</td>
+            </tr>
+            <tr>
+                <td>Minino salvaje</td>
+                <td>1000$</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>TOTAL</td>
+            <td>1000$</td>
+        </tfoot>
+    </table>                                                  
+    </body>
+</html>

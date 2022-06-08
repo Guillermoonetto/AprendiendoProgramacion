@@ -1,0 +1,53 @@
+body {                                           /* Para asignar un estilo puede o bien escribir el nombre del atributo o usar #+ID */
+
+}
+#tituloh1 {                                     /* Para asignar estilos a en base al ID se debe usar el simbolo # seguido del ID*/
+    color: red;
+}
+
+p.texto {                                       /* usando el nombre de la etiqueta seguida de un punto y el nombre de la clase podemos establecer el estilo */
+    color: green;
+}
+
+p.especial {                                    /*IMPORTANTE - En css la prioridad de los comandanos es de abajo hacia arriba por ello si tenemovarios parrafos que tiene clases con palabras comunes se priorizara el cambio de abajo hacia arriba*/
+    color: blue;
+}
+
+div p {                                        /* Este selector sirve para indicar que dentro del atributo "div" en todos los atributos "p" que se encuentren en su interior sean hijos,nietos,subnietos,etc se va a establecer un estilo. En este caso use "p" como ejemplo puede ser otros */
+    color: aqua;
+} 
+
+div h2, div h3 {                              /* Si despues del la coma yo escribiera solo h3 se aplicaria a todos los h3 para eso debo agregar nuevamente que quiero que se modifique solamente los h3 que estan dentro de los div*/
+    color: brown;
+}
+
+* {                                           /* El asterico sirve para seleccionar TODOS los elementos dentro de HTML y aplicar las propiedades siempre y cuando no se le hayan aplicado otras propiedas , aquellos elementos que tengan propiedades aplicadas no seran reemplazadas, solo seran reemplazadas aquellas propiedasdes queno se hayan aplicado*/
+    font-size: 20px;
+    color: black;
+    font-style: italic;
+}
+
+/*.color {                                     /* La asignacion de color se puede hacer de 3 formas de manera exagesimal(# + 6 caracteres, tambien puede hacerce con 3 caracteres), RGB o valores HSL 
+    color: #865447; 
+} */
+/*
+.color {
+    color rgb(0,0,0); /*RGB                      /* En la convencion RGB hay 3 espacios , el primero para el rojo , sgundo para el verde , tercero para el azul , los valores van de 0 a 255 siendo 0 negro y 255 la maxima intensidad del color
+} */
+
+.color {
+    /* border: 5px orange outset; */                  /* Se puede agregar bordes de diferente tipo como por ejemplo: dotted, dashed,solid,double, goove,ridge, inset, outset, none , hidden. los elementos que van desde goove hasta outset se pueden aplicar a objetos 3d*/
+} 
+
+.color {
+    border-style: solid;
+    border-color: orangered;
+    border-radius: 4px;
+    border-width: 1em;                                /* Las unidades de medidas que se utilizan son en pixeles (esta es relativa por que no todos los pixeles tiene el mismo tama;o), en cm , en mm, en in (pulgada= 2,54cm), en PT (puntos) y tambien en pc (picas= a 12 puntos) */
+                                                      /* Lo mejor es usar medidas relativas respecto a las fuetnes por ejemplo em o rem*/
+}
+
+#fondo {
+    background-color: rgb(255,0,0,0.5);             /* La propiedad background-color me permite darle un color al fondo de la etiqueta, si queremos darle opacidad lo que hacemo es agregar una variable mas despues de la tercera en rgb */
+    opacity: 0.5;                                     /* La propiedad opacity permite darle opacidad al elemento completo y no solo al color , va de 0 diendo completamente opaco a 1 completamente trasparente*/       
+}

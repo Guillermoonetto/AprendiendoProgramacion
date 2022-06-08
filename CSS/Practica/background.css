@@ -1,0 +1,47 @@
+body {
+    background-color: #eee;
+}
+
+div {
+    padding: 7px 15px;
+    margin: 10px;
+}
+
+.rojo {
+    text-align: center;
+    background-color: white;
+    width: 150px;
+    border-left: 1px solid red;
+    box-shadow: 1px 2px 7px;
+    transition: 0.1s;
+    }
+
+.rojo:hover {
+    transform: scale(1.05);
+}
+
+.verde {
+    text-align: center;
+    background-color: white;
+    width: 150px;
+    border-left: 1px solid green;
+    box-shadow: 1px 2px 7px;
+    transition: 0.1s;
+}
+
+.verde:hover {
+    box-shadow: 1px 2px 14px;
+}
+
+.azul {
+    text-align: center;
+    background-color: white;
+    width: 150px;
+    border-left: 1px solid blue;
+    box-shadow: 1px 2px 7px;
+    transition: 0.1s;
+}
+
+.azul:hover {
+    background-color: darkgrey;
+}

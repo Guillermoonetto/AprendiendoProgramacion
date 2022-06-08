@@ -1,0 +1,42 @@
+body {
+    background-color: #eee;
+}
+
+.caja {
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 4px;
+    border-top: solid 0px;
+    }
+
+.parrafo {
+    padding: 10px;
+}
+
+h1 {
+    padding: 10px;
+    border-bottom: solid 1px gainsboro;
+}
+
+.pie {
+    padding: 10px;
+    border-top: solid 1px gainsboro;
+}
+
+.botonaceptar {
+    background-color: rgb(179, 179, 214);
+    border: 0px ;
+    padding: 5px;
+    color: white;
+    border-radius: 2px;
+}
+
+.botoncancelar {
+    background-color: #aaa(179, 179, 214);
+    border: 0px ;
+    padding: 5px;
+    color: balck;
+    border-radius: 2px;
+}
